@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Contact form</title>
+  <title>Contact form</title>
 
   <style>
     body{
@@ -19,6 +19,7 @@
       width: 80%;
       background-color: hsl(0, 0%, 100%);
       border-radius: 10px;
+      padding-left: 20px;
     }
     form, button, h1{
       margin-left: 20px;
@@ -85,8 +86,11 @@
       border-radius: 10px;
       background-color: hsl(169, 82%, 27%);
     }
-    
-    
+    @media (max-width: 425px) {
+      main{
+        padding-right: 20px;
+      } 
+    }
     
   </style>
 </head>
@@ -113,14 +117,14 @@
    </form>
 
    <form class="three">
-    <div>
+    <div id="first_query">
      <label>Query Type *<div class="radio1"><input id="general" name="radio" type="radio"><span>General Enquiry</span></p></div></label>
-
     </div>
 
-     <div>
+     <div id="second_query">
        <div class="radio2"><input id="support" name="radio" type="radio"><span>Support Request</span></div>
      </div>
+
      <p id="generalerror"></p>
    </form>
 
@@ -162,12 +166,15 @@
       if (first_name === "" || last_name === "" || textarea_name === "") {
         firstname_error.textContent = "This field is required!";
         firstname_error.style.color = "red";
+        document.getElementById("firstname").style.borderColor = "red";
 
         lastname_error.textContent = "This field is required!";
         lastname_error.style.color = "red";
+        document.getElementById("lastname").style.borderColor = "red";
 
         message_error.textContent = "This field is required!";
         message_error.style.color = "red"
+        document.getElementById("textarea").style.borderColor = "red";
 
         isvalid = false;
       }
@@ -175,26 +182,38 @@
         firstname_error.textContent = "";
         lastname_error.textContent = "";
         message_error.textContent = "";
+        document.getElementById("firstname").style.borderColor = "";
+        document.getElementById("lastname").style.borderColor = "";
+        document.getElementById("textarea").style.borderColor = "";
       }
 
        //Email
-      if (!email_address.includes("@")) {
+      if (!email_address.includes("@gmail")) {
         email_error.textContent = "Please enter a valid email address!";
         email_error.style.color = "red";
+        document.getElementById("emailaddress").style.borderColor = "red";
         isvalid = false;
       }
       else{
         email_error.textContent = "";
+        document.getElementById("emailaddress").style.borderColor = "";
       }
+
+      const firstquery = document.getElementById("first_query");
+      const secondquery = document.getElementById("second_query");
 
       //Query Type
       if (!general_name && !support_name) {
         general_error.textContent = "Please select a query type";
         general_error.style.color = "red";
+        document.getElementById("first_query").style.borderColor = "red";
+        document.getElementById("second_query").style.borderColor = "red";
         isvalid = false;
       }
       else{
         general_error.textContent = "";
+        document.getElementById("first_query").style.borderColor = "";
+        document.getElementById("second_query").style.borderColor = "";
       }
 
      
@@ -213,7 +232,7 @@
       location.reload();
     }
   }
-   </script>
+   </script>  
   
 </body>
 </hml>
