@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+
+</head>
+<style>
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main{
+    display: flex;
+    margin-top: 50px;
+  }
+  .section_one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 30px;
+    width: 320px;
+    height: 500px;
+    position: relative;
+    left: 10px;
+  }
+  
+  .result{
+    color: white;
+  }
+  .number{
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    margin-top: 35px;
+    color: white;
+  }
+  .hundred{
+    font-size: 20px;
+    color:white;
+    opacity: 0.7;
+  }
+  .blue{
+    text-align: center;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .para{
+    width: 200px;
+    color: white;
+    text-align: center;
+  }
+  .great{
+    color: white;
+  }
+  .section_two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 30px;
+    width: 320px;
+    height: 500px;
+    text-align: center;
+    box-shadow: 2px 2px 5px 1px rgb(236, 234, 234);
+  }
+  .section_two h1{
+    margin: 0;
+    margin-right: 5em;
+  }
+  .section_two p{
+    margin: 0;
+  }
+  .section_two div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    width: 70%;
+    height: 50px;
+    border-radius: 15px;
+  }
+  svg{
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+  }
+  span{
+    opacity: 0.6;
+  }
+  
+  .one{
+    background-color: hsl(0, 58%, 95%);
+  }
+  .one:hover{
+    background-color: hsl(0, 90%, 81%);
+  }
+  .two{
+    background-color: hsl(40, 57%, 93%);
+  }
+  .two:hover{
+    background-color: hsl(42, 100%, 84%);
+  }
+  .three{
+    background-color: hsl(165, 86%, 92%);
+  }
+  .three:hover{
+    background-color: hsl(164, 95%, 83%);
+  }
+  .four{
+    background-color: hsl(253, 62%, 90%);
+  }
+  .four:hover{
+    background-color: hsl(254, 93%, 82%);
+  }
+  .para1{
+    color: hsl(0, 100%, 67%);
+  }
+  .para2{
+    color: hsl(39, 100%, 56%);
+  }
+  .para3{
+    color: hsl(166, 100%, 37%);
+  }
+  .para4{
+    color: hsl(234, 85%, 45%);
+  }
+  input{
+    width: 69%;
+    height: 50px;
+    margin-top: 30px;
+    border: 0;
+    border-radius: 30px;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+  }
+  input:hover{
+    background-color: hsl(241, 81%, 54%);
+  }
+
+  @media (max-width: 425px) {
+    body{
+      padding: 0;
+    }
+  
+    main{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    .section_one{
+      margin-right: 15px;
+      position: relative;
+      top: 10px;
+    }
+    .section_two{
+      margin-left: 10px;
+    }
+    
+  }
+</style>
+<body>
+<main>
+  <section class="section_one">
+
+  <h1 class="result">Your Result</h1>
+    <div class="blue">
+        <p class="number">76</p>
+        <p class="hundred">of 100</p>
+    </div>
+
+     <h1 class="great">Great</h1>
+    <p class="para">You scored higher than 65% of the people who have taken these tests.</p>
+  </section>
+  
+  <section class="section_two">
+    <h1>Summary</h1>
+
+
+   <div class="one"> 
+    <p class="para1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+      <path stroke="#F55" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z"/></svg> Reaction</p>
+    <p>80 / <span>100</span></p>
+   </div>
+
+   <div class="two">
+    <p class="para2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+      <path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M5.833 11.667a2.5 2.5 0 1 0 .834 4.858"/>
+      <path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M3.553 13.004a3.333 3.333 0 0 1-.728-5.53m.025-.067a2.083 2.083 0 0 1 2.983-2.824m.199.054A2.083 2.083 0 1 1 10 3.75v12.917a1.667 1.667 0 0 1-3.333 0M10 5.833a2.5 2.5 0 0 0 2.5 2.5m1.667 3.334a2.5 2.5 0 1 1-.834 4.858"/>
+      <path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M16.447 13.004a3.334 3.334 0 0 0 .728-5.53m-.025-.067a2.083 2.083 0 0 0-2.983-2.824M10 3.75a2.085 2.085 0 0 1 2.538-2.033 2.084 2.084 0 0 1 1.43 2.92m-.635 12.03a1.667 1.667 0 0 1-3.333 0"/></svg> Memory</p>
+    <p>92 / <span>100</span></p>
+   </div>
+
+   <div class="three">
+    <p class="para3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+      <path stroke="#00BB8F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M7.5 10h5M10 18.333A8.333 8.333 0 1 0 1.667 10c0 1.518.406 2.942 1.115 4.167l-.699 3.75 3.75-.699A8.295 8.295 0 0 0 10 18.333Z"/></svg> Verbal</p>
+    <p>61 / <span>100</span></p>
+   </div>
+
+  <div class="four">
+    <p class="para4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+      <path stroke="#1125D6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M10 11.667a1.667 1.667 0 1 0 0-3.334 1.667 1.667 0 0 0 0 3.334Z"/>
+      <path stroke="#1125D6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M17.5 10c-1.574 2.492-4.402 5-7.5 5s-5.926-2.508-7.5-5C4.416 7.632 6.66 5 10 5s5.584 2.632 7.5 5Z"/></svg> Visual</p>
+    <p>72 / <span>100</span></p>
+  </div>
+
+  <input id="button" class="button_one" type="button" value="Continue">
+
+</section>
+</main>
+
+  
+  
+</body>
+</html>
